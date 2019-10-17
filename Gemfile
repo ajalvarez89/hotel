@@ -18,6 +18,7 @@ gem 'rspec', '~> 3.9'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry', '~> 0.12.2'
 end
 
 group :development do
