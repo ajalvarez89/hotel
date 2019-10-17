@@ -1,4 +1,14 @@
 class BookingsController < ApplicationController
+    def index
+      @booking = Booking.all
+      render json: @booking.includes(:room,:user), status: :ok
+    end
+  
+    def show
+      @booking = Booking.find(params[:id])
+      render json: @booking, status: :ok
+    end
+  
     def create
       booking = Booking.new(booking_params)
   
