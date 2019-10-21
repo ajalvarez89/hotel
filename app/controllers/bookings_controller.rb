@@ -1,7 +1,12 @@
 class BookingsController < ApplicationController
     def index
       @booking = Booking.all
-      render json: @booking.includes(:room,:user), status: :ok
+
+      if @booking.present?
+        render json: @booking.includes(:room,:user), status: :ok
+      else 
+        render json: { error: 'No data was found' }, status: :ok
+      end
     end
   
     def show
