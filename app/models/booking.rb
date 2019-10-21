@@ -11,7 +11,7 @@ class Booking < ApplicationRecord
     discount = User::LOYALTY_MEMBER_TIER[user.loyalty_member_tier.to_sym]
     discount_price = (room_price * discount) / 100
 
-    final_price = room_price - discount_price
+    final_price = (room_price - discount_price) + minibar
 
     update(final_price: final_price)
   end
