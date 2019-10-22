@@ -13,7 +13,7 @@ RSpec.describe BookingsController, :type => :controller do
       # get(:index)
       # byebug
       # expect(assigns(:bookings))
-      # # byebug
+      # # byebug  
       # # bookings.index
     end
   end
