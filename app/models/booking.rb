@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: bookings
+#
+#  id          :integer          not null, primary key
+#  room_id     :integer
+#  user_id     :integer
+#  check_in    :date
+#  check_out   :date
+#  minibar     :float
+#  final_price :float
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 class Booking < ApplicationRecord
   validates :room_id, :user_id, :check_in, :check_out, presence: true
 

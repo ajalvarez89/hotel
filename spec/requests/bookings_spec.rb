@@ -1,19 +1,20 @@
 require 'rails_helper'
 
-RSpec.describe 'Booking endpoint', type: :request do
-  describe 'GET /bookings' do 
-    before {get '/bookings'}
+RSpec.describe BookingsController, :type => :controller do
 
-    it 'should return OK' do 
-      payload = JSON.parse(response.body)
-      byebug
-      expect(payload).not_to be_empty
-      # expect(payload['api']).to eq('OK')
+  describe 'GET index' do 
+    let(:bookings){BookingsController.new}
+    
+    before do
+      bookings
     end
 
-    it 'should return status code 200' do 
-      payload = JSON.parse(response.body)
-      expect(response).to have_http_status(200)
+    it 'return all bookings' do
+      # get(:index)
+      # byebug
+      # expect(assigns(:bookings))
+      # # byebug
+      # # bookings.index
     end
   end
 
@@ -24,13 +25,6 @@ RSpec.describe 'Booking endpoint', type: :request do
       expect("foo").to be_truthy 
       expect(nil).not_to be_truthy 
       expect(false).not_to be_truthy 
-    
-      # deliberate failures
-      # expect(true).not_to be_truthy
-      # expect(7).not_to be_truthy
-      # expect("foo").not_to be_truthy
-      # expect(nil).to be_truthy
-      # expect(false).to be_truthy
     end
   end
 end

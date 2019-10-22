@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: bookings
+#
+#  id          :integer          not null, primary key
+#  room_id     :integer
+#  user_id     :integer
+#  check_in    :date
+#  check_out   :date
+#  minibar     :float
+#  final_price :float
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 class BookingSerializer < ActiveModel::Serializer
   attributes :id, :minibar, :final_price,  :check_in, :check_out, :days, :client,:room
 

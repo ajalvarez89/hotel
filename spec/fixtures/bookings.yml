@@ -16,15 +16,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  room: one
-  user: one
+  id: 1
+  room_id: 1
+  user_id: 1
   check_in: 2019-03-28
   check_out: 2019-03-28
-  minibar: 1.5
-
-two:
-  room: two
-  user: two
-  check_in: 2019-03-28
-  check_out: 2019-03-28
-  minibar: 1.5
+  minibar: 30000.0

@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
       if @booking.present?
         render json: @booking.includes(:room,:user), status: :ok
       else 
-        render json: { error: 'No data was found' }, status: :ok
+        render json: { error: 'No data was found' }, status: :unprocessable_entity
       end
     end
   
@@ -35,7 +35,7 @@ class BookingsController < ApplicationController
         render json: booking.errors, status: :unprocessable_entity
       end
     end
-    
+
     private 
 
     def booking_params 

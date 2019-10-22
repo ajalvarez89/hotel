@@ -9,6 +9,10 @@
 #  updated_at :datetime         not null
 #
 
-class Room < ApplicationRecord
-  validates :number, :daily_rate, presence: true
-end
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  number: '101'
+  daily_rate: 50000.0
+
