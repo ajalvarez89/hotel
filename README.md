@@ -1,25 +1,62 @@
-# README
+# hotel-api
 
-This is a API aplication for to do bookins
+This is an API about bookings in a hotel
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
-  2.5.3
+Just run the bin setup:
 
-* System dependencies
-  
+```bash
+  bin/setup
+```
 
-* Configuration
+To run the app:
 
-* Database creation
+```bash
+  rails server
+```
+## Endpoinds:💎
 
-* Database initialization
+* GET Users:
+```bash
+   localhost:3000/users
+```
+* GET Rooms:
+```bash
+   localhost:3000/rooms
+```
+* GET Bookings:
+```bash
+   localhost:3000/bookings
+```
+* POST Bookings:
+```bash
+   localhost:3000/bookings
+```
+```bash
+   HEADER:
+   {
+	"booking":{
+		"user_id":1,
+		"room_id":2,
+		"check_in":"2019-10-18",
+		"check_out":"2019-10-19"
+	}
+}
+```
+* PUT Bookings:
+```bash
+   localhost:3000/bookings
+```
+```bash
+   HEADER:
+{
+	"booking":{
+		"minibar":35000
+	}
+}
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Pending
+- Install rspec
+- Create tests
