@@ -23,6 +23,7 @@ class BookingSerializer < ActiveModel::Serializer
     {
       first_name: user.first_name,
       last_name: user.last_name,
+      complete_name: "#{user.first_name} #{user.last_name}",
       loyalty_member_tier: user.loyalty_member_tier,
       discount: Operations::Calculate.discount(days,room.daily_rate,User::LOYALTY_MEMBER_TIER[user.loyalty_member_tier.to_sym])
     }
