@@ -10,7 +10,7 @@ RSpec.describe BookingsController, :type => :controller do
     end
 
     it 'return all bookings' do
-
+      expect(true).to be_truthy
     end
   end
 
