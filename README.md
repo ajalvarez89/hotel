@@ -10,18 +10,6 @@ Just run the bin setup:
   bin/setup
 ```
 
-Create and bind the queue into RabbitMq
-
-```bash
-  rake rabbitmq:setup
-```
-
-Command for run the workers
-
-```bash
-  WORKERS=PostsWorker rake sneakers:run
-```
-
 To run the app:
 
 ```bash

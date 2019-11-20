@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
     def index
-      @booking = Booking.all
+      @booking ||= Booking.all
 
       if @booking.present?
         render json: @booking.includes(:room,:user), status: :ok
@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     end
 
     def show
-      @booking = Booking.find(params[:id])
+      @booking ||= Booking.find(params[:id])
       render json: @booking, status: :ok
     end
 
@@ -25,7 +25,7 @@ class BookingsController < ApplicationController
     end
 
     def update
-      booking = Booking.find(params[:id])
+      booking ||= Booking.find(params[:id])
       booking.assign_attributes(minibar: booking_params[:minibar])
 
       if booking.save
