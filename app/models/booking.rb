@@ -11,7 +11,7 @@
 #  final_price :float
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#
+
 
 class Booking < ApplicationRecord
   validates :room_id, :user_id, :check_in, :check_out, presence: true
